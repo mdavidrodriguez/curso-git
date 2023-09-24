@@ -68,5 +68,13 @@ git branch -> Ver rama donde nos encontramos y las disponibles.
 
 git push -u origin feature-posts-styles -> Enviar cambios de la nueva rama e inmediatamente crear la rama en el repositorio remoto.
 
+Se puede realizar pull request y merge en el remoto usando la interfaz.
+
+git pull -> Bajar los cambios que hemos hecho en el repositorio remoto al local.
+
+
+--------------------------------------
+    Trabajar con varias ramas
+--------------------------------------
 
 
