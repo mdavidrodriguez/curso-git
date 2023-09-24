@@ -13,7 +13,7 @@ git init -> Inicializar un repositorio de git
 git status -> Nos muestra como esta actualmente nuestro repositorio.
 git add . -> Pasar al Staging Area.
 git commit -m "" -> Pasar cambios a Commited, los mensajes deben ser descriptivos.
-git log -> Ver los commits, se peude ver el hasd del commit, fecha, autor, rama.
+git log -> Ver los commits, se puede ver el hasd del commit, fecha, autor, rama.
 git checkout 51ae0ce6524 -> Viajar entre versiones del proyecto. Tener cuidado con el estado state HEAD.
 git checkout master/main -> volver al ultimo commit, con el nombre de la rama.
 
@@ -28,4 +28,33 @@ git log --oneline -> Ver los commits en una sola linea.
 rm index.html  -> Eliminar archivo, no se elimina, ya que que esta traqueado.
 git restore index.html -> Recuperar archivo eliminado.
 ls -a -> Ver carpeta con archivos ocultos.
+
+--------------------------------
+   Autenticación en git usando SSH
+--------------------------------
+git remote -v -> ver los origin
+crear repositorio y crear clave ssh -> Se elige la opcion ssh y se enlaza el repositorio local al remoto.
+
+https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent -> Se crea la clave ssh publica y privada siguiendo la documentación.
+-----
+Nota : Esto se deben hacer en una git bash en nuestro proyecto local de nuestro laptop, se indica la clave para confirmar las claves.
+-----
+luego se hace un push al repositorio enlazado: git push -u origin master/main/nombre-rama.
+Se aceptan las condiciones en el push escribiendo yes.
+
+- Se accede a la carpeta que creo git en nuestro directorio raiz del equipo : cd .ssh
+
+-listar claves: Publica y privada con ls
+
+- se muestra la clave publica: cat id_ed25519.pub --> la segunda clave corresponde a la publica. Utilizar esa.
+- Se añaden esas claves en la configuración de nuestra cuenta de git hub.git
+- finalmente se realiza el git push -u origin master/main/nombre-rama y este solicitara la clave privada, se le ingresa y nuestra proyecto se subira al repositorio.
+
+---Comandos para que no solicite la clave al clonar hasta que cierre la bash.
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_ed25519
+
+rm -rf curso-git/ -> Borrar proyecto versionado en git.
+
+
 
