@@ -79,3 +79,8 @@ git pull -> Bajar los cambios que hemos hecho en el repositorio remoto al local.
 
 --Luego de hacer el pull request, realizamos el merge y finalmente bajamos esos cambios en localñ con git pull.
 
+
+------------------------------------
+    Mezclar ramas en local
+------------------------------------
+
