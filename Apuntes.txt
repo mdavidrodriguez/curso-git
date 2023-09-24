@@ -104,3 +104,5 @@ git log --graph --oneline -> Ver el sistema de ramas en local. El arbol de los m
     Hacer un fork y añadir cambios
 ---------------------------------------
 
+git checkout -b bugfix-3-only-2-comments
+
