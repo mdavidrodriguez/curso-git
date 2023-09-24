@@ -79,3 +79,30 @@ git pull -> Bajar los cambios que hemos hecho en el repositorio remoto al local.
 
 --Luego de hacer el pull request, realizamos el merge y finalmente bajamos esos cambios en localñ con git pull.
 
+
+------------------------------------
+    Mezclar ramas en local
+------------------------------------
+Creamos una rama local y le agregamos cambios.
+
+Luego a esa rama le hacemos un commit.
+
+Posteriormente nos movemos a la rama a la cual queremos agregar esos nuevos cambios hechos en la rama nueva.
+Comandos Ejemplos:
+    git checkout feature-load-adds-from-api -> Rama nueva
+    git add . -> Pasamos los cambios al staging Area
+    git commit -m "Create load adds function" -> Pasamos del staging area al commited.
+    git checkout feature-adds -> Nos movemos a la otra rama donde queremos hacer el merge.
+    git merge feature-load-adds-from-api -> hacemos un merge de la rama nueva a la anterior.
+    git checkout master --> Nos movemos a la rama principal.
+    git merge feature-adds -> Añadimos los cambios de la rama que tuvo los cambios de la otra rama y la unimos a la principal.
+    
+git log --graph --oneline -> Ver el sistema de ramas en local. El arbol de los merge que se realizaron.
+
+
+---------------------------------------
+    Hacer un fork y añadir cambios
+---------------------------------------
+
+git checkout -b bugfix-3-only-2-comments
+
