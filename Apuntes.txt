@@ -94,7 +94,13 @@ Comandos Ejemplos:
     git commit -m "Create load adds function" -> Pasamos del staging area al commited.
     git checkout feature-adds -> Nos movemos a la otra rama donde queremos hacer el merge.
     git merge feature-load-adds-from-api -> hacemos un merge de la rama nueva a la anterior.
+    git checkout master --> Nos movemos a la rama principal.
+    git merge feature-adds -> Añadimos los cambios de la rama que tuvo los cambios de la otra rama y la unimos a la principal.
+    
+git log --graph --oneline -> Ver el sistema de ramas en local. El arbol de los merge que se realizaron.
 
 
-
+---------------------------------------
+    Hacer un fork y añadir cambios
+---------------------------------------
 
