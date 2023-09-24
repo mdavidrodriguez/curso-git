@@ -56,5 +56,17 @@ ssh-add ~/.ssh/id_ed25519
 
 rm -rf curso-git/ -> Borrar proyecto versionado en git.
 
+---------------------------
+    Pull request - Ramas
+---------------------------
+Crear una bifurcación de la rama principal
+git checkout -b nombre-rama  -> Crear rama y cambiar inmediatamente a ella.
+ejemplo: 
+    git checkout -b feature-posts-styles
+
+git branch -> Ver rama donde nos encontramos y las disponibles.
+
+git push -u origin feature-posts-styles -> Enviar cambios de la nueva rama e inmediatamente crear la rama en el repositorio remoto.
+
 
 
