@@ -1,0 +1,31 @@
+-----------------------
+    Estados de git
+-----------------------
+working tree: Directorio de trabajo
+Staging Area: Se crean cambios pendientes de ser enviados.
+Commited: Se crea version de la aplicación.
+
+
+-----------------------------
+    Comandos basicos de git
+------------------------------
+git init -> Inicializar un repositorio de git
+git status -> Nos muestra como esta actualmente nuestro repositorio.
+git add . -> Pasar al Staging Area.
+git commit -m "" -> Pasar cambios a Commited, los mensajes deben ser descriptivos.
+git log -> Ver los commits, se peude ver el hasd del commit, fecha, autor, rama.
+git checkout 51ae0ce6524 -> Viajar entre versiones del proyecto. Tener cuidado con el estado state HEAD.
+git checkout master/main -> volver al ultimo commit, con el nombre de la rama.
+
+-------------------------------------------
+    Deshacer cambios y recuperar archivos
+-------------------------------------------
+git reset f74932750e -> Revertir los cambios que hemos hecho se moveran al directorio de trabajo, es decir se elimina el commit. 
+
+git reset --hard f7493275 -> Todos los cambios que se hayan realizado hasta ese punto se pierde, cuidado ya que no se puede volver a recuperar. Es decir empezar desde cero.
+
+git log --oneline -> Ver los commits en una sola linea.
+rm index.html  -> Eliminar archivo, no se elimina, ya que que esta traqueado.
+git restore index.html -> Recuperar archivo eliminado.
+ls -a -> Ver carpeta con archivos ocultos.
+
